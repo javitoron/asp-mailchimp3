@@ -23,9 +23,9 @@
     call mc.post("lists/" & list_id & "/members", merge_vars, null)
     
     if mc.success() then
-        response.write "<p>Suscriptor Mailchimp creado</p>"
+        response.write "<p>Mailchimp suscriptor added</p>"
     else
-        response.write "<p>Error al crear el suscriptor en Mailchimp. " & _ 
+        response.write "<p>Error creating Mailchimp suscriptor. " & _ 
             mc.getLastError() & "</p>"
 
         dim myJSON
