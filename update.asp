@@ -16,14 +16,11 @@
     if mc.success() then
         response.write "<p>Mailchimp suscriptor updated</p>"
     else
-        response.write "<p>Error updating Mailchimp suscriptor</p>"
-
-        dim myJSON
-        set myJSON = new aspJSON
-        myJSON.loadJSON_from_string(mc.getLastResponseBody())
+        response.write "<p>Error updating Mailchimp suscriptor. " & _
+            mc.getLastHTTPError() & "</p>"
 
         Response.Write "<p>" & _
-            "<strong>" & myJSON.data.item("title") & "</strong>: " & _
-            myJSON.data.item("detail") & "</p>"
+            "<strong>" & mc.getAPIErrorTitle() & "</strong>: " & _
+            mc.getAPIErrorDetail() & "</p>"
     end if              
 %>
