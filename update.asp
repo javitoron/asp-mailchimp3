@@ -1,6 +1,6 @@
 <!--#include file="lib/BF_MC_list.asp"-->
 <%
-    dim list_id, apikey
+    dim list_id
     list_id = "0b43e32f1a"
     dim subscriber_hash, merge_fields
     subscriber_hash = mc.subscriberHash(Request.Form("email"))
