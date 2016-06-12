@@ -8,9 +8,9 @@
     call mc.delete("lists/" & list_id & "/members/" & subscriber_hash, null, null)
     
     if mc.success() then
-        response.write "<p>Deleted Mailchimp suscriptor</p>"
+        response.write "<p>Deleted Mailchimp subscriber</p>"
     else
-        response.write "<p>Error deleting Mailchimp suscriptor</p>"
+        response.write "<p>Error deleting Mailchimp subscriber</p>"
         
         dim myJSON
         set myJSON = new aspJSON
