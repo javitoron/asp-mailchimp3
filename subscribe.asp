@@ -26,15 +26,11 @@
         response.write "<p>Mailchimp suscriptor added</p>"
     else
         response.write "<p>Error creating Mailchimp suscriptor. " & _ 
-            mc.getLastError() & "</p>"
-
-        dim myJSON
-        set myJSON = new aspJSON
-        myJSON.loadJSON_from_string(mc.getLastResponseBody())
+            mc.getLastHTTPError() & "</p>"
 
         Response.Write "<p>" & _
-            "<strong>" & myJSON.data.item("title") & "</strong>: " & _
-            myJSON.data.item("detail") & "</p>"
+            "<strong>" & mc.getAPIErrorTitle() & "</strong>: " & _
+            mc.getAPIErrorDetail() & "</p>"
 
     end if              
 %>
