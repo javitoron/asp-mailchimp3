@@ -14,9 +14,9 @@
     call mc.patch("lists/" & list_id & "/members/" & subscriber_hash, merge_fields, null)
     
     if mc.success() then
-        response.write "<p>Mailchimp suscriptor updated</p>"
+        response.write "<p>Mailchimp subscriber updated</p>"
     else
-        response.write "<p>Error updating Mailchimp suscriptor. " & _
+        response.write "<p>Error updating Mailchimp subscriber. " & _
             mc.getLastHTTPError() & "</p>"
 
         Response.Write "<p>" & _
