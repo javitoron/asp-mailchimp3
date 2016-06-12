@@ -1,4 +1,4 @@
-<!--#include file="lib/BF_MC_list.asp"-->
+<!--#include file="lib/setup_MC.asp"-->
 <%
     dim list_id
     list_id = "0b43e32f1a"
@@ -23,9 +23,9 @@
     call mc.post("lists/" & list_id & "/members", merge_vars, null)
     
     if mc.success() then
-        response.write "<p>Mailchimp suscriptor added</p>"
+        response.write "<p>Mailchimp subscriber added</p>"
     else
-        response.write "<p>Error creating Mailchimp suscriptor. " & _ 
+        response.write "<p>Error creating Mailchimp subscriber. " & _ 
             mc.getLastHTTPError() & "</p>"
 
         Response.Write "<p>" & _
