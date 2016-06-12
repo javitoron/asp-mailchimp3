@@ -1,4 +1,4 @@
-<!--#include file="lib/BF_MC_list.asp"-->
+<!--#include file="lib/setup_MC.asp"-->
 <%
     dim list_id
     list_id = "0b43e32f1a"
