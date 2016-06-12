@@ -14,9 +14,16 @@
     call mc.patch("lists/" & list_id & "/members/" & subscriber_hash, merge_fields, null)
     
     if mc.success() then
-        response.write "<p>Suscriptor Mailchimp updated</p>"
+        response.write "<p>Mailchimp suscriptor updated</p>"
     else
         response.write "<p>Error updating Mailchimp suscriptor</p>"
-     '   echo "<p>" . $MailChimp->getLastError() . "</p>";
+
+        dim myJSON
+        set myJSON = new aspJSON
+        myJSON.loadJSON_from_string(mc.getLastResponseBody())
+
+        Response.Write "<p>" & _
+            "<strong>" & myJSON.data.item("title") & "</strong>: " & _
+            myJSON.data.item("detail") & "</p>"
     end if              
 %>
