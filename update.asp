@@ -9,18 +9,14 @@
     Set merge_fields.data("merge_fields") = merge_fields.Collection()
     merge_fields.data("merge_fields").add "FNAME", Request.Form("fname")
     merge_fields.data("merge_fields").add "LNAME", Request.Form("lname")
-    merge_fields.data("merge_fields").add "MMERGE3", Request.Form("tratamiento")
-    merge_fields.data("merge_fields").add "MMERGE4", Request.Form("solicitudes")
-    merge_fields.data("merge_fields").add "MMERGE5", Request.Form("alumnoDe")
-    merge_fields.data("merge_fields").add "MMERGE6", Request.Form("titulos")
-    merge_fields.data("merge_fields").add "MMERGE7", Request.Form("bajas")
- 
+    merge_fields.data("merge_fields").add "MMERGE3", Request.Form("phone")
+
     call mc.patch("lists/" & list_id & "/members/" & subscriber_hash, merge_fields, null)
     
     if mc.success() then
-        response.write "<p>Suscriptor Mailchimp modificado</p>"
+        response.write "<p>Suscriptor Mailchimp updated</p>"
     else
-        response.write "<p>Error al modificar el suscriptor en Mailchimp</p>"
+        response.write "<p>Error updating Mailchimp suscriptor</p>"
      '   echo "<p>" . $MailChimp->getLastError() . "</p>";
     end if              
 %>
