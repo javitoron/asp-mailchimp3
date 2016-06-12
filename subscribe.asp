@@ -16,11 +16,7 @@
         with merge_vars.data("merge_fields")
             .add "FNAME", Request.Form("fname")
             .add "LNAME", Request.Form("lname")
-            .add "MMERGE3", Request.Form("tratamiento")
-            .add "MMERGE4", Request.Form("solicitudes")
-            .add "MMERGE5", Request.Form("alumnoDe")
-            .add "MMERGE6", Request.Form("titulos")
-            .add "MMERGE7", Request.Form("bajas")
+            .add "MMERGE3", Request.Form("phone")
         end with
     end with
  
