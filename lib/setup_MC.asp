@@ -3,7 +3,7 @@
 <!--#include file="aspJSON1.17.asp"-->
 <%
     dim apikey
-    apiKey = "apikey xxxxxxxxxxxxxxx-us7"
+    apiKey = "apikey xxxxxxxxxxxxxxx-usx"
 
     dim mc
     set mc = new MailChimp
