@@ -3,6 +3,6 @@ Super-simple, minimum abstraction MailChimp API v3 wrapper, in ASP, based on dre
 
 Here you have the wrapper and the examples to use it.
 
-No batch and no webhook.
+No webhooks yet.
 
 Hope it helps!
