@@ -204,7 +204,7 @@ class MailChimp
         req.setTimeouts timeout * 500, timeout * 500, timeout * 1000, _
             timeout * 1000 'ms - resolve, connect, send, receive
         req.open http_verb, url & params, false ', "username", "password"
-        req.setRequestHeader "Authorization", apiKey
+        req.setRequestHeader "Authorization", api_key
         req.setRequestHeader "Content-Type", "application/json"
 
         if http_verb = "post" or http_verb = "patch" or http_verb = "put" then
